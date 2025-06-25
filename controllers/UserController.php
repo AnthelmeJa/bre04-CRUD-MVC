@@ -42,6 +42,10 @@
             require "templates/layout.phtml";
         }
         
+        public function home() : void {
+            $route = "home";
+            require "templates/layout.phtml";
+        }
        
         
         

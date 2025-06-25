@@ -29,4 +29,18 @@ Préremplissez vos templates avec le strict minimum, la structure de base d'une 
 Il y a plus de méthodes que de templates, que pouvez-vous en déduire ? Répondez-moi dans un message sur Discord.
 
 j'imagine que c'est une question de sécuriter . il y'aura un côté admin pour check et delete.
-Le fait davoir créer un dossier User dans templates ma bien aider pour comprendre 
+
+correction : 
+en fait il y a plus de méthodes que de templates parce que certaines méthodes n'affichent pas de template 🙂
+elle font du traitement qui ne se voit pas en front, par exemple traiter des formulaires 🙂
+
+
+## Étape 2
+
+Grâce aux déductions de l'étape précédente, vous allez pouvoir mettre en place le squelette de votre `UserController`, créez donc la classe et ses méthodes. Pour les méthodes dont vous avez déduit ce qu'elles doivent afficher, préparez la variable `$route` et faites un `require` du layout.
+
+Une fois que c'est fait, vérifiez que vos routes affichent bien le bon template. Comment pourriez-vous vous simplifier ces tests ?
+
+>💡 N'oubliez pas de require le fichier `controllers/UserController.php` dans votre fichier `config/autoload.php`
+
+Une fois que vous avez terminé cette étape, envoyez-moi un message sur Discord pour obtenir la suite des consignes.

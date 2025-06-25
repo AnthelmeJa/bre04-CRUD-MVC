@@ -9,33 +9,36 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="index.php?route=list_user">Accueil</a>
+						<a href="index.php">Accueil</a>
 					</li>
 					<li>
-						<a href="index.php?route=show_user">À propos</a>
+						<a href="index.php?route=show_user">Show</a>
 					</li>
 					<li>
-						<a href="index.php?route=create_user">Contact</a>
+						<a href="index.php?route=create_user">Create</a>
 					</li>
 					<li>
-						<a href="index.php?route=update_user">dev-back</a>
+						<a href="index.php?route=update_user">Update</a>
+					</li>
+					<li>
+						<a href="index.php?route=list_user">list</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<?php
-		    if($route === "list_user"){
-		        require "templates/list.phtml";
-		        
-		    }else if($route === "show_user"){
-		        require "templates/show.phtml";
+		
+		    if($route === "show_user"){
+		        require "templates/Users/show.phtml";
 		        
 		    }else if($route === "create_user"){
-		        require "templates/create.phtml";
+		        require "templates/Users/create.phtml";
 		        
 		    }else if($route === "update_user"){
-		        require "templates/update.phtml";
+		        require "templates/Users/update.phtml";
 		        
+		    }else if ($route === "list_user"){
+		    	require "templates/Users/list.phtml";
 		    }
 		    
 		   

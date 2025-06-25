@@ -10,36 +10,40 @@
         public function handleRequest(array $get) : void{
             $controller = new UserController();
             
+            if (!isset($get["route"])){
+                $controller->home();
+            }
+                
             if(isset($get["route"])){
                 
                 
                 if($get["route"] === "show_user" ){
                 
-                //$controller->show();
+                $controller->show();
                 
                 }else if ($get["route"] === "create_user" ){
                     
-                    //$controller->create();
+                    $controller->create();
                     
                 }else if ($get["route"] === "check_create_user" ){
                     
-                    //$controller->checkCreate();
+                    $controller->checkCreate();
                     
                 }else if ($get["route"] === "update_user" ){
                     
-                    //$controller->update();
+                    $controller->update();
                     
                 }else if ($get["route"] === "check_update_user" ){
                     
-                    //$controller->checkUpdate();
+                    $controller->checkUpdate();
                     
                 }else if ($get["route"] === "delete_user" ){
-                    
-                    //$controller->delete();
+                
+                    $controller->delete();
                     
                 }else{
                     
-                    //$controller->list();
+                    $controller->list();
                     
                 }
             }
