@@ -27,3 +27,6 @@ Préremplissez vos templates avec le strict minimum, la structure de base d'une 
 >💡 N'oubliez pas de require le fichier `config/Router.php` dans votre fichier `config/autoload.php`
 
 Il y a plus de méthodes que de templates, que pouvez-vous en déduire ? Répondez-moi dans un message sur Discord.
+
+j'imagine que c'est une question de sécuriter . il y'aura un côté admin pour check et delete.
+Le fait davoir créer un dossier User dans templates ma bien aider pour comprendre 
