@@ -1,5 +1,6 @@
 <?php
-    require "AbstractManager.php";
+    require_once "AbstractManager.php";
+    require_once __DIR__ . '/../models/User.php';
     
    class UserManager extends AbstractManager{
        
@@ -26,7 +27,7 @@
                     );
             }
             
-            return $userAll;
+            return $usersAll;
         }
         
         public function findOne(int $id){
@@ -53,12 +54,12 @@
         
         
         public function create(User $user){
-            $query = $this->db->prepare('INSERT INTO users (email, first_name, last_name) VALUE (:email, :first_name, :last_name)');
+            $query = $this->db->prepare('INSERT INTO users (email, first_name, last_name) VALUES (:email, :first_name, :last_name)');
             
             $parameters=[
                 'email'=> $user->getEmail(),
-                'first_name' => $user->getFirstName(),
-                'last_name' => $user->getLastName()
+                'first_name' => $user->getFirst_name(),
+                'last_name' => $user->getLast_name()
             ];
             
             $query->execute($parameters);
@@ -70,8 +71,8 @@
             $parameters=[
                 'id'=>$user->getId(),
                 'email'=> $user->getEmail(),
-                'first_name' => $user->getFirstName(),
-                'last_name' => $user->getLastName()
+                'first_name' => $user->getFirst_name(),
+                'last_name' => $user->getLast_name()
             ];
             
             $query->execute($parameters);
@@ -82,11 +83,13 @@
             $query = $this->db->prepare('DELETE FROM users WHERE id = :id;');
             
             $parameters=[
-                'id'=>$_POST['id'],
+                'id'=>$user->getId()
+
             ];
             
             $query->execute($parameters);
         }
+        
         
         
         

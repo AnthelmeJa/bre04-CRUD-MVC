@@ -14,8 +14,20 @@
         }
         
         public function checkCreate() : void {
-            $route = "check_create_user";
-            require "templates/layout.phtml";
+            
+            
+            $check_create_email = $_POST['email'];
+            $check_create_first_name  = $_POST['first_name'];
+            $check_create_last_name  = $_POST['last_name'];
+            
+            $user = new User($check_create_email, $check_create_first_name, $check_create_last_name);
+            
+            $manager = new UserManager();
+            $manager->create($user);
+            
+            header("Location: index.php?route=list_user");
+            exit;
+            
         }
         
         
@@ -28,6 +40,10 @@
         public function checkUpdate() : void {
             $route = "check_update_user";
             require "templates/layout.phtml";
+            
+           
+            
+            
         }
         
         

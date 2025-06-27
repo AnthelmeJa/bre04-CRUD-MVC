@@ -1,8 +1,11 @@
 <?php 
-    require __DIR__ . "/../controllers/UserController.php";
-    require __DIR__ . "/../config/Routeur.php";
-    require __DIR__ . "/../managers/AbstractManager.php";
-    require __DIR__ . "/../config/autoload.php";
+
+
+    require_once __DIR__ . '/../models/User.php';
+    require_once __DIR__ . '/../managers/AbstractManager.php';
+    require_once __DIR__ . '/../managers/UserManager.php';
+    require_once __DIR__ . '/../controllers/UserController.php';
+    require_once __DIR__ . '/Routeur.php';
 
 
 
